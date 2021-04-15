@@ -9,16 +9,17 @@ namespace StarWars
         #region Fields
         private const double moviePrice=10d; 
         private readonly List<string> _movies;
-        private readonly Dictionary<int,double> discounts;
-        private const int _chunkSize=3;
+        private readonly SortedDictionary<int,double> discounts;
+        private readonly int _chunkSize=3;
         #endregion Fields
 
         public ShoppingCart()
         {
             _movies=new List<string>(10);
-            discounts=new Dictionary<int, double>();
+            discounts=new SortedDictionary<int, double>();
             discounts.Add(2,5);
             discounts.Add(3,10);
+            _chunkSize=discounts.Keys.Last();
         }
 
         #region Methods
