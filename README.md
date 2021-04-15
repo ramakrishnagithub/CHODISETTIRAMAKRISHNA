@@ -1,5 +1,15 @@
 # CHODISETTI RAMAKRISHNA CODING TEST
 
+# Steps followed to create solution
+ - dotnet sln add StarWars/StarWars.csproj
+# Requirements
+1. .net 5.0
+2. Visual Studio code
+
+# Run Test
+dotnet test StarWarsTest/StarWarsTest.csproj
+
+
 # Constructor 
 
 Below code Initializes Sorted dictionary with discounts and calculated dynamic chunk size based discount dictionary
