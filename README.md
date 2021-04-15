@@ -15,6 +15,8 @@
 # Run Test
 dotnet test StarWarsTest/StarWarsTest.csproj
 
+dotnet test StarWarsTest/StarWarsTest.csproj --configuration Release
+
 # Constructor 
 
 Below code Initializes Sorted dictionary with discounts and calculated dynamic chunk size based discount dictionary
