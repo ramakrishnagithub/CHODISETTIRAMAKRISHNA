@@ -1,5 +1,10 @@
 # CHODISETTI RAMAKRISHNA CODING TEST
-```C#
+
+# Constructor 
+
+Below code Initializes Sorted dictionary with discounts and calculated dynamic chunk size based discount dictionary
+
+```
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -24,28 +29,39 @@ namespace StarWars
             discounts.Add(4,20);
             _chunkSize=discounts.Keys.Last();
         }
+```
+# Add Movie Method
 
-        #region Methods
+Below method adds movie name to List
+
+```
+      
         public void AddMovie(string name)
         {
             _movies.Add(name);
         }
+```
+# Compute Price Method
+
+Below method 
         public double ComputePrice()
         {
            var finalAmount=0d;
-           var chunks=_movies.ChunkBy(_chunkSize);
+           var chunks=_movies.ChunkBy(_chunkSize); //Calculate Chunks
            chunks.ForEach(chunk=>{
 
-               var distinctMovies=chunk.Distinct().Count();
-               var distinctMovieAmount=distinctMovies*moviePrice;
-               var nondistinctMovieAmount = chunk.GroupBy(x => x).Where(x => x.Count() > 1).Select(x => x.Key).Count()*moviePrice;
+               var distinctMovies=chunk.Distinct().Count(); //GetDistinct movies
+               var distinctMovieAmount=distinctMovies*moviePrice; 
+               var nondistinctMovieAmount = chunk.GroupBy(x => x).Where(x => x.Count() > 1).Select(x => x.Key).Count()*moviePrice; //calculate  duplicate movie amount.
 
+               // calculate Discount movie amount based on distinct movie count
                if(discounts.ContainsKey(distinctMovies))
                {
                    var discount=distinctMovieAmount*(discounts[distinctMovies]/100);
                    distinctMovieAmount=distinctMovieAmount-discount;
                }
-
+               
+               //calculate finalAmount
                finalAmount+= distinctMovieAmount+nondistinctMovieAmount;
            });          
            
@@ -55,7 +71,12 @@ namespace StarWars
         
         #endregion Methods
     }
+```
+# Extension method to get chunk data based on chunk size
 
+Below code returns Chunks of List based on chunk size
+
+```
     public static class Extensions
     {
 public static List<List<T>> ChunkBy<T>(this List<T> source, int chunkSize)
@@ -69,6 +90,8 @@ public static List<List<T>> ChunkBy<T>(this List<T> source, int chunkSize)
     }
 
 }
+
+```
 
 ```XUnit
 using System;
