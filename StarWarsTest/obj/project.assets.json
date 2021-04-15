@@ -1648,6 +1648,16 @@
         "build": {
           "build/netcoreapp2.1/xunit.runner.visualstudio.props": {}
         }
+      },
+      "StarWars/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v5.0",
+        "compile": {
+          "bin/placeholder/StarWars.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/StarWars.dll": {}
+        }
       }
     }
   },
@@ -5607,11 +5617,17 @@
         "xunit.runner.visualstudio.2.4.3.nupkg.sha512",
         "xunit.runner.visualstudio.nuspec"
       ]
+    },
+    "StarWars/1.0.0": {
+      "type": "project",
+      "path": "../StarWars/StarWars.csproj",
+      "msbuildProject": "../StarWars/StarWars.csproj"
     }
   },
   "projectFileDependencyGroups": {
     "net5.0": [
       "Microsoft.NET.Test.Sdk >= 16.7.1",
+      "StarWars >= 1.0.0",
       "coverlet.collector >= 1.3.0",
       "xunit >= 2.4.1",
       "xunit.runner.visualstudio >= 2.4.3"
@@ -5645,7 +5661,11 @@
       "frameworks": {
         "net5.0": {
           "targetAlias": "net5.0",
-          "projectReferences": {}
+          "projectReferences": {
+            "/Users/ramakrishnachodisetti/GitPersonal/DiscountCalculator/StarWars/StarWars.csproj": {
+              "projectPath": "/Users/ramakrishnachodisetti/GitPersonal/DiscountCalculator/StarWars/StarWars.csproj"
+            }
+          }
         }
       },
       "warningProperties": {

@@ -5,6 +5,8 @@ VisualStudioVersion = 16.6.30114.105
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "StarWars", "StarWars\StarWars.csproj", "{D8B9C30C-0D64-4A98-8424-6973415525BA}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "StarWarsTest", "StarWarsTest\StarWarsTest.csproj", "{CAA779A2-3843-4E07-A5AE-5AA0E44AA183}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -30,5 +32,17 @@ Global
 		{D8B9C30C-0D64-4A98-8424-6973415525BA}.Release|x64.Build.0 = Release|Any CPU
 		{D8B9C30C-0D64-4A98-8424-6973415525BA}.Release|x86.ActiveCfg = Release|Any CPU
 		{D8B9C30C-0D64-4A98-8424-6973415525BA}.Release|x86.Build.0 = Release|Any CPU
+		{CAA779A2-3843-4E07-A5AE-5AA0E44AA183}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CAA779A2-3843-4E07-A5AE-5AA0E44AA183}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CAA779A2-3843-4E07-A5AE-5AA0E44AA183}.Debug|x64.ActiveCfg = Debug|Any CPU
+		{CAA779A2-3843-4E07-A5AE-5AA0E44AA183}.Debug|x64.Build.0 = Debug|Any CPU
+		{CAA779A2-3843-4E07-A5AE-5AA0E44AA183}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{CAA779A2-3843-4E07-A5AE-5AA0E44AA183}.Debug|x86.Build.0 = Debug|Any CPU
+		{CAA779A2-3843-4E07-A5AE-5AA0E44AA183}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CAA779A2-3843-4E07-A5AE-5AA0E44AA183}.Release|Any CPU.Build.0 = Release|Any CPU
+		{CAA779A2-3843-4E07-A5AE-5AA0E44AA183}.Release|x64.ActiveCfg = Release|Any CPU
+		{CAA779A2-3843-4E07-A5AE-5AA0E44AA183}.Release|x64.Build.0 = Release|Any CPU
+		{CAA779A2-3843-4E07-A5AE-5AA0E44AA183}.Release|x86.ActiveCfg = Release|Any CPU
+		{CAA779A2-3843-4E07-A5AE-5AA0E44AA183}.Release|x86.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal
