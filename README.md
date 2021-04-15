@@ -43,8 +43,10 @@ Below method adds movie name to List
 ```
 # Compute Price Method
 
-Below method 
-        public double ComputePrice()
+Below method calculated total price based on movies count.
+
+```
+    public double ComputePrice()
         {
            var finalAmount=0d;
            var chunks=_movies.ChunkBy(_chunkSize); //Calculate Chunks
