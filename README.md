@@ -1,5 +1,9 @@
 # CHODISETTI RAMAKRISHNA CODING TEST
 
+# Requirements
+1. .net 5.0
+2. Visual Studio code
+
 # Steps followed to create solution
  - dotnet new sln DiscountCalculator
  - dotnet new classlib -o StarWars
@@ -7,14 +11,9 @@
  - dotnet new xunit -o StarWarsTest
  - dotnet sln add StarWarsTest/StarWarsTest.Proj
  - dotnet add StarWarsTest/StarWarsTest.csproj reference StarWars/StarWars.csproj // aded project reference.
- 
-# Requirements
-1. .net 5.0
-2. Visual Studio code
 
 # Run Test
 dotnet test StarWarsTest/StarWarsTest.csproj
-
 
 # Constructor 
 
