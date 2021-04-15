@@ -19,6 +19,7 @@ namespace StarWars
             discounts=new SortedDictionary<int, double>();
             discounts.Add(2,5);
             discounts.Add(3,10);
+            discounts.Add(4,20);
             _chunkSize=discounts.Keys.Last();
         }
 
@@ -44,8 +45,7 @@ namespace StarWars
                }
 
                finalAmount+= distinctMovieAmount+nondistinctMovieAmount;
-           });
-           
+           });          
            
            return finalAmount;
         }

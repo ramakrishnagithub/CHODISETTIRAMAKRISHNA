@@ -63,5 +63,43 @@ namespace StarWarsTest
             double finalAmount=shopCart.ComputePrice();
             Assert.Equal(29d,finalAmount);
         }
+        [Fact]
+        public void FourMoviesInCartApplyTwentyPercentDiscount()
+        {
+            var shopCart=new ShoppingCart();
+
+            shopCart.AddMovie("StarWars 1");
+            shopCart.AddMovie("StarWars 2");
+            shopCart.AddMovie("StarWars 3");
+            shopCart.AddMovie("StarWars 4");
+            double finalAmount=shopCart.ComputePrice();
+            Assert.Equal(32d,finalAmount);
+        }
+        [Fact]
+        public void FourMoviesInCartDoNotApplyTwentyPercentDiscount()
+        {
+            var shopCart=new ShoppingCart();
+
+            shopCart.AddMovie("StarWars 1");
+            shopCart.AddMovie("StarWars 2");
+            shopCart.AddMovie("StarWars 3");
+            shopCart.AddMovie("StarWars 2");
+            double finalAmount=shopCart.ComputePrice();
+            Assert.Equal(37d,finalAmount);
+        }
+        [Fact]
+        public void CurveBallTest_SixMoviesInCart()
+        {
+            var shopCart=new ShoppingCart();
+
+            shopCart.AddMovie("StarWars 1");
+            shopCart.AddMovie("StarWars 2");
+            shopCart.AddMovie("StarWars 3");
+            shopCart.AddMovie("StarWars 4");
+            shopCart.AddMovie("StarWars 1");
+            shopCart.AddMovie("StarWars 2");
+            double finalAmount=shopCart.ComputePrice();
+            Assert.Equal(51d,finalAmount);
+        }
     }
 }
